@@ -17,15 +17,11 @@ tn.write("enable\n")
 tn.write("cisco\n")  # enable password is cisco
 tn.write("configure terminal\n")
 
-print "ok"
 for n in range(2, 12):
     tn.write("vlan " + str(n) + "\n")
     tn.write("name Python_VLAN_" + str(n) + "\n")
-    print"VLAN " + str(n) + "created"
-tn.write("end")
-print"end"
-tn.write("exit")
-print"exit"
-print tn.read_all()
+    
+tn.write("end\n")
+tn.write("exit\n")
 
-print "ok"
+print tn.read_all()
