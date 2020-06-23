@@ -5,7 +5,6 @@ Host = "localhost"
 Username = "admin"
 Password = "cisco"
 
-# tel = telnetlib.Telnet(Host)
 
 with open("config.txt",'r') as config:
     for host in config:
@@ -25,7 +24,6 @@ with open("config.txt",'r') as config:
             N = str(N)
             tel.write(b"vlan "+ N.encode('ascii')+ b'\n')
             tel.write(b"name python_vlan_" + N.encode('ascii') + b'\n')
-        #print(b"Valn " + N.encode('ascii')+b" Created")
 
         tel.write(b'end\n')
         tel.write(b'exit\n')
