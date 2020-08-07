@@ -22,3 +22,5 @@ tn.write("end\n")
 tn.write("exit\n")
 
 print tn.read_all()
+
+print "Thanks"
